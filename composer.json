@@ -1,0 +1,19 @@
+{
+    "name": "ntsalikis/harbour",
+    "description": "A simple PHP Library for creating web apps.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ntsalikis\\harbour\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nikos Tsalikis",
+            "email": "n.tsalikis97@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
