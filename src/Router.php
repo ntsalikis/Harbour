@@ -1,8 +1,8 @@
 <?php
 
-namespace core;
+namespace ntsalikis\harbour;
 
-use ntsalikis\harbour;
+use ntsalikis\harbour\SubRouter;
 
 class Router
 {
