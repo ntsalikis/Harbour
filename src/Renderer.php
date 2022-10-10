@@ -1,6 +1,6 @@
 <?php
 
-namespace core;
+namespace ntsalikis\harbour;
 
 class Renderer
 {
