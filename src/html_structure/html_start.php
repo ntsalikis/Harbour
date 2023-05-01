@@ -5,7 +5,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <?php if(array_key_exists('content_languate', $template_metadata)): ?>
+    <?php if(array_key_exists('content_language', $template_metadata)): ?>
         <meta http-equiv="Content-Language" content="<?= $template_metadata['content_language'] ?>">
     <?php endif; ?>
 
