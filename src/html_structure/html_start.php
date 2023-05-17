@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php if(array_key_exists('js', $template_metadata)): ?>
+        <?php foreach($template_metadata['js'] as $script): ?>
+            <?php if($script['prepend'] == true): ?>
+                <?php if($script['async'] == true): ?>
+                    <script src="<?= $script['path']?>" async></script>
+                <?php elseif($script['async'] == false): ?>
+                    <script src="<?= $script['path']?>"></script>
+                <?php endif; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+
     <meta charset="UTF-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -50,8 +62,14 @@
     <?php endif; ?>
 
     <?php if(array_key_exists('js', $template_metadata)): ?>
-        <?php foreach($template_metadata['js'] as $js_file_path): ?>
-            <script src="<?= $js_file_path ?>"></script>
+        <?php foreach($template_metadata['js'] as $script): ?>
+            <?php if($script['prepend'] == false): ?>
+                <?php if($script['async'] == true): ?>
+                    <script src="<?= $script['path']?>" async></script>
+                <?php elseif($script['async'] == false): ?>
+                    <script src="<?= $script['path']?>"></script>
+                <?php endif; ?>
+            <?php endif; ?>
         <?php endforeach; ?>
     <?php endif; ?>
 
